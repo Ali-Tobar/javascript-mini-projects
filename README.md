@@ -35,3 +35,5 @@ git clone https://github.com/Ali-Tobar/javascript-mini-projects.git
    ```bash
    git clone https://github.com/Ali-Tobar/javascript-mini-projects.git(https://github.com/Ali-Tobar/javascript-mini-projects.git)
    ```
+
+> **Project status:** Educational frontend demos. These examples run in the browser and do not provide backend services or production authentication.

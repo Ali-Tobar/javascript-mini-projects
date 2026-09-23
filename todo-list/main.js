@@ -66,7 +66,7 @@ function addElementsToPageFrom(arrayOfTasks) {
     div.className = "task";
     // check if Task is Done
     if (task.completed) {
-      div.className = "task Done";
+      div.className = "task done";
     }
     div.setAttribute("data-id", task.id);
     div.appendChild(document.createTextNode(task.title));
@@ -103,12 +103,12 @@ function deleteTaskWith(taskId) {
   addDataToLocalStorgeFrom(arrayOfTasks);
 }
 function toggleStatusTaskWith(taskId) {
-  for (let i = 0; i < arrayOfTasks.length; i++) {
-    if (arrayOfTasks[i].id === taskId) {
-      arrayOfTasks[i].completed == false
-        ? arrayOfTasks[i].completed == true
-        : arrayOfTasks[i].completed == false;
-    }
+  const numericTaskId = Number(taskId);
+  const task = arrayOfTasks.find((item) => item.id === numericTaskId);
+
+  if (task) {
+    task.completed = !task.completed;
   }
+
   addDataToLocalStorgeFrom(arrayOfTasks);
 }
